@@ -7,6 +7,8 @@ public class Generator {
     public Generator(boolean includeUpper, boolean includeLower, boolean includeNumbers, boolean includeSymbols){
         alphabet = new Alphabet(includeUpper, includeLower, includeNumbers, includeSymbols);
     }
+    public Generator(){
+    }
 
 
 
@@ -31,15 +33,11 @@ public class Generator {
         return password;
     }
 
-    private void checkPassword() {
-        String input;
-
-        System.out.print("\nEnter your password:");
-        input = keyboard.next();
+    public String checkPassword(String input) {
 
         final Password password = new Password(input);
 
-        System.out.println(password.calculateScore());
+        return password.calculateScore();
     }
 
 }

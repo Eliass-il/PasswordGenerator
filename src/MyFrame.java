@@ -19,24 +19,21 @@ public class MyFrame extends JFrame{
         this.setIconImage(imageIcon.getImage());
         this.getContentPane().setBackground(Color.DARK_GRAY);
         this.setLayout(null);
+        this.setLocationRelativeTo(null);
 
         buttonGenerate = new JButton("Generate password");
         buttonGenerate.setBounds(120, 170, 150, 50);
         buttonGenerate.setFocusable(false);
         buttonGenerate.addActionListener(e -> {
             new GeneratePasswordWindow();
-            this.dispose();
         });
-
-
 
 
         buttonPasswordStrength = new JButton("Check password");
         buttonPasswordStrength.setBounds(120, 230, 150, 50);
         buttonPasswordStrength.setFocusable(false);
         buttonPasswordStrength.addActionListener(e -> {
-            CheckPasswordStrengthWindow window = new CheckPasswordStrengthWindow();
-            this.dispose();
+            new CheckPasswordStrengthWindow();
         });
 
 

@@ -63,13 +63,13 @@ public class Password {
         int Score = this.passwordStrength();
 
         if (Score == 6) {
-            return "Strong";
+            return "Strong!";
         } else if (Score >= 4) {
-            return "Good";
+            return "Good!";
         } else if (Score >= 3) {
-            return "Medium";
+            return "Medium!";
         } else {
-            return "Weak";
+            return "Weak!";
         }
     }
 

@@ -11,13 +11,14 @@ public class GeneratePasswordWindow extends JFrame {
     JSlider passLength;
     GeneratePasswordWindow(){
         this.setTitle("Password generator");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setResizable(false);
         this.setSize(400, 400);
         ImageIcon imageIcon = new ImageIcon("I:\\Idea Projects\\PasswordGenerator\\assets\\logo.png");
         this.setIconImage(imageIcon.getImage());
         this.getContentPane().setBackground(Color.DARK_GRAY);
         this.setLayout(null);
+        this.setLocationRelativeTo(null);
 
 
         labelQ1 = new JLabel("Do you want Uppercase letters to be used?");
@@ -128,6 +129,7 @@ public class GeneratePasswordWindow extends JFrame {
             passwordFrame.setIconImage(imageIcon.getImage());
             passwordFrame.getContentPane().setBackground(Color.DARK_GRAY);
             passwordFrame.setLayout(null);
+            passwordFrame.setLocationRelativeTo(null);
             JTextField textField = new JTextField();
             textField.setText(password.toString());
             textField.setEditable(false);

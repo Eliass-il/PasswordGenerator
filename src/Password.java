@@ -9,9 +9,9 @@ public class Password {
 
     public int charType(char chr){
         int val;
-        if (chr >= 'A' && chr <= 'Z')
+        if ((int)chr >= 65 && (int)chr <= 90)
             val = 1;
-        else if (chr >= 'a' && chr <= 'z')
+        else if ((int)chr >= 97 && (int)chr <= 122)
             val = 2;
         else if ((int)chr >= 48 && (int)chr <= 57)
             val = 3;
